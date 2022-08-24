@@ -1,6 +1,6 @@
 const TABLE_NAME = 'all-for-you';
 const config = {
-    PORT: process.env.PORT || 5000,
+    PORT: process.env.PORT || 5000, '0.0.0.0'
     //DB_CONNECTION: `mongodb://localhost/${TABLE_NAME}`,
     DB_CONNECTION: `mongodb+srv://dy707:Draze999@cluster0.ruqu4pf.mongodb.net/?retryWrites=true&w=majority`,
     SECRET: 'badumts',
@@ -14,7 +14,14 @@ const config = {
 }
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/'))
+    app.use(express.static('/client/build'));
+    
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+    });
+} else {
+    app.get("/", (req, res) => {
+        res.send("DB running")
+    })
 }
-
 module.exports = config;
