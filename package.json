@@ -250,7 +250,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js && npm start"
+    "start": "cd server && node index.js  npm start",
+   
   },
   "repository": {
     "type": "git",
