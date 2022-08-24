@@ -1,6 +1,6 @@
 const TABLE_NAME = 'all-for-you';
 const config = {
-    PORT: process.env.PORT || 5000, '0.0.0.0'
+    PORT: process.env.PORT || '0.0.0.0'
     //DB_CONNECTION: `mongodb://localhost/${TABLE_NAME}`,
     DB_CONNECTION: `mongodb+srv://dy707:Draze999@cluster0.ruqu4pf.mongodb.net/?retryWrites=true&w=majority`,
     SECRET: 'badumts',
