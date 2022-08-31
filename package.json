@@ -14,8 +14,6 @@
 
     "dev:app": "cd client && npm start",
 
-    "build:app": "cd client && npm run build",
-
     "dev": "node index.js",
 
     "start": "node index.js",
