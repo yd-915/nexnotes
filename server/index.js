@@ -15,7 +15,7 @@ const io = require("socket.io")(http, {
       credentials: true
    }
 });
-const ChatRoom = require('./server/models/ChatRoom')
+const ChatRoom = require('./models/ChatRoom')
 
    io.on('connection', async function (socket) {
    
